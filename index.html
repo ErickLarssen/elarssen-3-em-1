@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elarssen</title>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <style>
+    @import url("https://use.typekit.net/gvp4xoa.css");
+
+    * {
+      margin: 0;
+      box-sizing: 0;
+      outline: none;
+    }
+
+    body {
+      font-family: "eurostile-extended", sans-serif;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #000;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 50px;
+    }
+
+    .logo {
+      padding: 20px 0 0;
+    }
+
+    .logo img {
+      width: 150px;
+    }
+
+    .menu ul li {
+      list-style: none;
+      display: inline-block;
+      margin: 26px 25px;
+    }
+
+    .menu ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      position: relative;
+    }
+
+    .menu ul li a:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -10%;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: all ease 0.5s;
+    }
+
+    .menu ul li a:hover:before {
+      width: 120%;
+    }
+
+    .content {
+      display: flex;
+      position: relative;
+      margin-top: -80px;
+    }
+
+    .content img {
+      width: 100%;
+    }
+
+    .common {
+      width: 50%;
+      position: relative;
+    }
+
+    .img {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .img-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      z-index: 9;
+      transition: all ease 0.5s;
+    }
+
+    .text-design,
+    .text-code {
+      position: absolute;
+      bottom: 80px;
+      left: 0;
+      width: 100%;
+      color: #fff;
+      text-align: center;
+    }
+
+    .text-design h1 {
+      font-size: 82px;
+      font-family: Butler;
+      font-weight: 300;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .text-code h1 {
+      font-size: 82px;
+      font-family: "eurostile-extended", sans-serif;
+      font-weight: 300;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .text-design h5 {
+      font-size: 28px;
+      font-family: Butler;
+      text-transform: uppercase;
+      letter-spacing: 20px;
+    }
+
+    .text-code h5 {
+      font-size: 28px;
+      font-family: "eurostile-extended", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 20px;
+    }
+
+    .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .btn a {
+      display: inline-block;
+      border: 1px solid #fff;
+      padding: 25px 60px;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+      opacity: 0;
+      transition: all ease 0.5s;
+    }
+
+    .btn a:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .common:hover .btn a {
+      opacity: 1;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <div class="logo">
+        <img src="assets/img/elarssen_logo_secundario.png" alt="Logo">
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Code</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="design common">
+        <div class="img">
+          <img src="assets/img/elarssen(1080x1350).jpg" alt="Logo">
+          <div class="img-overlay"></div>
+        </div>
+        <div class="text-design">
+          <h1>Elarssen</h1>
+          <h5>Design</h5>
+        </div>
+        <div class="btn">
+          <a href="design.html">Explorar</a>
+        </div>
+      </div>
+      <div class="code common">
+        <div class="img">
+          <img src="assets/img/elarssen-code-solutions-logo.jpg" alt="Logo">
+          <div class="img-overlay"></div>
+        </div>
+        <div class="text-code">
+          <h1>Elarssen</h1>
+          <h5>Code</h5>
+        </div>
+        <div class="btn">
+          <a href="code.html">Explorar</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script>
+    
+    const tl_img = gsap.timeline({ease: "Power1.easeInOut"})
+
+    .to(".design .img-overlay", {
+      duration: 1,
+      y: "100%"
+    })
+
+  </script>
+</body>
+
+</html>
