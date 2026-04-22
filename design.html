@@ -1,127 +1,165 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+   <html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
-    <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 
-    <!--=============== REMIXICONS ===============-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/design.css">
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/design.css">
+      <!--=============== SWIPER CSS ===============-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
 
-    <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+      <title>Elarssen Design</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+           <a href="#" class="nav__logo">
+             <i class="ri-stethoscope-line"></i>Medical
+           </a>
+           
+           <div class="nav__menu" id="nav-menu">
+             <ul class="nav__list">
+               <li>
+                 <a href="#home" class="nav__link">Home</a>
+               </li>
+               
+               <li>
+                 <a href="#servicos" class="nav__link">Serviços</a>
+               </li>
+               
+               <li>
+                 <a href="#sobre" class="nav__link">Sobre</a>
+               </li>
+               
+               <li>
+                 <a href="#projetos" class="nav__link">Projetos</a>
+               </li>
+               
+               <li>
+                 <a href="#contato" class="nav__link">Contato</a>
+               </li>
+             </ul>
+             
+             <!--Fechar button-->
+             <div class="nav__close" id="nav-close">
+               <i class="ri-close-large-line"></i>
+             </div>
+           </div>
+           
+           <div class="nav__buttons">
+             <!--Tema button-->
+             <i class="ri-moon-fill nav__theme" id="theme-button"></i>
+             
+             <!--Toggle button-->
+             <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line"></i>
+             </div>
+           </div>
+           
+         </nav>
+      </header>
 
-    <title>Responsive medical website - Bedimcode</title>
-</head>
-
-<body>
-    <!--==================== HEADER ====================-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">
-                <i class="ri-quill-pen-fill"></i> Design
-            </a>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__lista">
-                    <li>
-                        <a href="#home" class="nav__link">Home</a>
-                    </li>
-
-                    <li>
-                        <a href="#about" class="nav__link">Sobre Nós</a>
-                    </li>
-
-                    <li>
-                        <a href="#services" class="nav__link">Serviços</a>
-                    </li>
-
-                    <li>
-                        <a href="#gallery" class="nav__link">Galeria</a>
-                    </li>
-
-                    <li>
-                        <a href="#contact" class="nav__link">Contato</a>
-                    </li>
-                </ul>
-
-                <!-- Fechamento button -->
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-large-line"></i>
-                </div>
-
-                <div class="nav__buttons">
-                    <!-- Tema button -->
-                    <i class="ri-pantone-fill nav__theme" id="theme-button"></i>
-
-                    <!-- Toggle button -->
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="ri-menu-line"></i>
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== HOME ====================-->
+         <section class="home section" id="home">
+            <div class="home__container container grid">
+              <div class="home__data">
+                <h1 class="home__title">
+                  <span>Get Quick</span>
+                  <br>Medical Service
+                </h1>
+                
+                <p class="home__description">
+                  Get your medical service from a certified doctor and health professional.
+                </p>
+                
+                <a href="#servicos" class="button">Get Started</a>
+              </div>
+              
+              <div class="home__content grid">
+                <div class="home__info">
+                  <div>
+                    <h2 class="home__name">
+                      Dr. Shaun Murphy
+                    </h2>
+                    <h3 class="home__profession">
+                      Surgeon Specialist
+                    </h3>
+                    
+                    <div class="home__icons">
+                      <div class="home__box">
+                        <i class="ri-medicine-bottle-fill"></i>
+                      </div>
+                      <div class="home__box">
+                        <i class="ri-24-hours-line"></i>
+                      </div>
                     </div>
+                  </div>
+                  
+                  <a href="#contato" class="home__button button__dark">
+                    <i class="ri-arrow-right-s-line"></i>
+                    Contato
+                  </a>
                 </div>
+                
+                <div class="home__image">
+                  <img src="assets/img/home-img-design.png" alt="Imagem" class="home__img">
+                </div>
+              </div>
             </div>
+         </section>
 
-            <div class="nav__buttons">
+         <!--==================== SERVIÇOS ====================-->
+         <section class="servicos section" id="servicos">
+            
+         </section>
 
-            </div>
-        </nav>
-    </header>
+         <!--==================== SOBRE ====================-->
+         <section class="sobre section" id="sobre">
+            
+         </section>
 
-    <!--==================== MAIN ====================-->
-    <main class="main">
-        <!--==================== HOME ====================-->
-        <section class="home section" id="home">
+         <!--==================== PROJETOS ====================-->
+         <section class="projetos section" id="projetos">        
+            
+         </section>
 
-        </section>
+         <!--==================== GALERIA ====================-->
+         <section class="galeria section">
+            
+         </section>
 
-        <!--==================== DELIVERY ====================-->
-        <section class="delivery section" id="delivery">
+         <!--==================== CONTATO ====================-->
+         <section class="contato section" id="contato">
+            
+         </section>
+      </main>
 
-        </section>
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         
+      </footer>
 
-        <!--==================== ABOUT ====================-->
-        <section class="about section" id="about">
+      <!--========== SCROLL UP ==========-->
+      
 
-        </section>
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+      
+      <!--=============== SWIPER JS ===============-->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
-        <!--==================== PRICES ====================-->
-        <section class="prices section" id="prices">
-
-        </section>
-
-        <!--==================== GALLERY ====================-->
-        <section class="gallery section">
-
-        </section>
-
-        <!--==================== CONTACT ====================-->
-        <section class="contact section" id="contact">
-
-        </section>
-    </main>
-
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-
-    </footer>
-
-    <!--========== SCROLL UP ==========-->
-
-
-    <!--=============== SCROLLREVEAL ===============-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
-
-    <!--=============== SWIPER JS ===============-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
-    <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main-design.js"></script>
-</body>
-
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/design/main.js"></script>
+   </body>
 </html>
