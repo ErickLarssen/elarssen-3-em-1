@@ -7,8 +7,8 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(218, 94%, 45%);
-  --first-color-alt: hsl(218, 100%, 40%);
+  --first-color: hsl(355, 70%, 50%);
+  --first-color-alt: hsl(223, 43%, 22%);
   --second-color: hsl(200, 85%, 64%);
   --title-color: hsl(218, 48%, 22%);
   --text-color: hsl(218, 8%, 36%);
@@ -253,7 +253,7 @@ img {
 .button__dark{
   position: relative;
   background: linear-gradient(var(--dark-color), var(--dark-color)),
-              linear-gradient(22deg, var(--second-color) 0%, var(--dark-color) 25%);
+              linear-gradient(22deg, var(--white-color) 0%, var(--dark-color) 25%);
   border: 3px solid transparent;
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -264,7 +264,7 @@ img {
   display: flex;
   align-items: center;
   gap: .5rem;
-  box-shadow: 0 4px 16px hsla(218, 68%, 18%, .4rem);
+  box-shadow: 0 4px 16px hsla(218, 68%, 18%, .4);
   overflow: hidden;
 }
 
@@ -373,7 +373,114 @@ img {
 }
 
 /*=============== SERVIÇOS ===============*/
+.servicos__container{
+  row-gap: 3rem;
+}
 
+.servicos__data{
+  overflow: hidden;
+}
+
+.servicos__description{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.servicos__info{
+  display: grid;
+  grid-template-columns: repeat(3, 140px);
+  column-gap: 2.5rem;
+  overflow: auto;
+  padding-bottom: 2rem;
+}
+
+.servicos__info::-webkit-scrollbar{
+  background-color: var(--gray-color);
+  height: 4px;
+  border-radius: 1rem;
+}
+
+.servicos__info::-webkit-scrollbar-thumb{
+  background-color: var(--first-color);
+  border-radius: 1rem;
+}
+
+.servicos__icon{
+  width: 48px;
+  height: 48px;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  border: 4px solid var(--gray-color);
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+  transition: border-color .4s;
+}
+
+.servicos__subtitle{
+  font-size: var(--h3-font-size);
+  margin-bottom: .5rem;
+}
+
+.servicos__content{
+  width: 250px;
+  background-color: var(--first-color);
+  padding-block: 3rem 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  justify-self: center;
+  display: grid;
+  justify-items: center;
+  box-shadow: 0 8px 16px hsla(218, 94%, 45%, .2);
+}
+
+.servicos__title{
+  font-size: var(--h1-font-size);
+  color: var(--white-color);
+  margin-bottom: 1.5rem;
+}
+
+.servicos__costumers{
+  background-color: var(--first-color-alt);
+  color: var(--white-color);
+  padding: 1rem 2rem;
+  border-radius: .75rem;
+  display: flex;
+  column-gap: .5rem;
+}
+
+.servicos__costumers span{
+  font-weight: var(--font-semi-bold);
+}
+
+.servicos__image{
+  position: relative;
+  width: 100%;
+  height: 186px;
+  margin-bottom: 2rem;
+}
+
+.servicos__image .button__dark{
+  position: absolute;
+  left: 50%;
+  bottom: -5rem;
+  transform: translateX(-50%);
+  width: max-content;
+  padding: .9rem 1.5rem;
+  z-index: 2;
+}
+
+.servicos__img{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  max-width: initial;
+  width: 300px;
+  filter: drop-shadow(0 16px 24px hsla(218, 68%, 18%, .6));
+}
 
 /*=============== SOBRE ===============*/
 
@@ -412,6 +519,19 @@ img {
   .home__icons{
     flex-direction: column;
   }
+  
+  .servicos__img{
+    width: 270px;
+  }
+}
+
+/* Para dispositivos médios */
+@media screen and (min-width: 440px){
+  .home__container,
+  .servicos__container{
+    grid-template-columns: 350px;
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 768px){
@@ -446,13 +566,19 @@ img {
     bottom: 0;
     width: 300px;
   }
-}
-
-/* Para dispositivos médios */
-@media screen and (min-width: 440px){
-  .home__container{
-    grid-template-columns: 350px;
-    justify-content: center;
+  
+  .servicos__container{
+    grid-template-columns: repeat(2, 350px);
+    align-items: center;
+  }
+  
+  .servicos__data, .section__title,
+  .servicos__description{
+    text-align: initial;
+  }
+  
+  .servicos__data{
+    order: 1;
   }
 }
 
@@ -533,6 +659,47 @@ img {
   .home__button{
     padding: 7rem 2rem;
     border-radius: 1rem;
+  }
+  
+  .servicos__container{
+    grid-template-columns: 350px 450px;
+    column-gap: 10rem;
+  }
+  
+  .servicos__content{
+    width: 280px;
+    padding-block: 4rem 3rem;
+  }
+  
+  .servicos__title{
+    font-size: var(--h2-font-size);
+  }
+  
+  .servicos__image{
+    margin-bottom: 4rem;
+  }
+  
+  .servicos__img{
+    width: 380px;
+  }
+  
+  .servicos__description{
+    margin-bottom: 3rem;
+  }
+  
+  .servicos__info{
+    grid-template-columns: repeat(3, 180px);
+    column-gap: 6rem;
+    padding-bottom: 6rem;
+  }
+  
+  .servicos__icon{
+    margin-bottom: .75rem;
+  }
+  
+  .servicos__subtitle{
+    font-size: var(--normal-font-size);
+    margin-bottom: .75rem;
   }
 }
 
