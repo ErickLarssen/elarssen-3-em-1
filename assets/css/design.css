@@ -483,7 +483,72 @@ img {
 }
 
 /*=============== SOBRE ===============*/
+.sobre__container{
+  background-color: var(--dark-color);
+  padding: 3rem 1.5rem 2rem;
+  row-gap: 3rem;
+  border-radius: 2rem;
+  box-shadow: 0 8px 16px hsla(218, 94%, 45%, .2);
+}
 
+.sobre__data{
+  display: grid;
+  row-gap: 3rem;
+}
+
+.sobre__data .section__title{
+  color: var(--white-color);
+}
+
+.sobre__description{
+  color: var(--white-color-light);
+  text-align: center;
+}
+
+.sobre__info{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+.sobre__number{
+  font-size: var(--h1-font-size);
+  color: var(--white-color);
+  margin-bottom: .25rem;
+}
+
+.sobre__details{
+  font-size: var(--small-font-size);
+  color: var(--white-color-light);
+}
+
+.sobre__stat:not(:last-child){
+  border-inline-end: 2px solid var(--white-color-light);
+}
+
+.sobre__img{
+  width: 250px;
+  border-radius: 1.5rem;
+  filter: drop-shadow(0 16px 24px hsla(218, 68%, 18%, .6));
+  justify-self: center;
+}
+
+.sobre__button{
+  color: var(--white-color);
+  display: inline-flex;
+  justify-self: center;
+  align-items: center;
+  column-gap: .5rem;
+}
+
+.sobre__button i{
+  font-size: 1.5rem;
+  transition: transform .4s;
+}
+
+.sobre__button i:hover{
+  transform: translateX(.25rem);
+}
 
 /*=============== PROJETOS ===============*/
 
@@ -511,6 +576,16 @@ img {
 
 /*=============== BREAKPOINTS ===============*/
 /* Para dispositivos pequenos */
+@media screen and (max-width: 360px){
+  .container{
+    margin-inline: 1rem;
+  }
+  
+  .section__title{
+    font-size: 1.5rem;
+  }
+}
+
 @media screen and (max-width: 330px){
   .home__title{
     font-size: 1.8rem;
@@ -523,6 +598,10 @@ img {
   .servicos__img{
     width: 270px;
   }
+  
+  .sobre__container{
+    padding-inline: 1rem;
+  }
 }
 
 /* Para dispositivos médios */
@@ -531,6 +610,11 @@ img {
   .servicos__container{
     grid-template-columns: 350px;
     justify-content: center;
+  }
+  
+  .sobre__container{
+    width: 350px;
+    margin-inline: auto;
   }
 }
 
@@ -579,6 +663,29 @@ img {
   
   .servicos__data{
     order: 1;
+  }
+  
+  .sobre__container{
+    width: 700px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  
+  .sobre__data .section__title,
+  .sobre__description{
+    text-align: initial;
+  }
+  
+  .sobre__info{
+    justify-items: flex-start;
+  }
+  
+  .sobre__stat{
+    padding-right: 1.5rem;
+  }
+  
+  .sobre__button{
+    justify-self: flex-start;
   }
 }
 
@@ -700,6 +807,30 @@ img {
   .servicos__subtitle{
     font-size: var(--normal-font-size);
     margin-bottom: .75rem;
+  }
+  
+  .sobre__container{
+    width: initial;
+    grid-template-columns: 440px 320px;
+    justify-content: center;
+    column-gap: 10rem;
+    padding-block: 3rem;
+  }
+  
+  .sobre__stat{
+    padding-right: 2.5rem;
+  }
+  
+  .sobre__number{
+    margin-bottom: .5rem;
+  }
+  
+  .sobre__details{
+    font-size: var(--normal-font-size);
+  }
+  
+  .sobre__img{
+    width: 320px;
   }
 }
 
